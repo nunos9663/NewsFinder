@@ -38,9 +38,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\AppController.cs" />
+    <Compile Include="Model\ErroDeLigacaoAPIException.cs" />
     <Compile Include="Model\NewsAPI.cs" />
     <Compile Include="Model\Noticia.cs" />
     <Compile Include="Model\NoticiaModel.cs" />
+    <Compile Include="Model\NoticiaNaoEncontradaException.cs" />
     <Compile Include="Model\Utilizador.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="View\HomeForm.cs">

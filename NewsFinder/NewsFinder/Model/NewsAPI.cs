@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Net.Http;
 using Newtonsoft.Json;
 using System.Dynamic;
+using NewsFinder.Model;
 
 namespace NewsFinder.Model
 {
@@ -26,7 +27,17 @@ namespace NewsFinder.Model
                 string termoCodificado = Uri.EscapeDataString(texto);
                 string url = string.Format(endpoint, termoCodificado, apiKey);
 
-                string resposta = await client.GetStringAsync(url);
+                //string resposta = await client.GetStringAsync(url);
+                string resposta;
+                try
+                {
+                    resposta = await client.GetStringAsync(url);
+                }
+                catch (HttpRequestException ex)
+                {
+                    throw new ErroDeLigacaoAPIException("Erro ao conectar à API de notícias.", ex);
+                }
+
 
                 dynamic json = JsonConvert.DeserializeObject(resposta);
                 var lista = new List<Noticia>();
@@ -39,6 +50,12 @@ namespace NewsFinder.Model
                         Conteudo = artigo.description
                     });
                 }
+
+                if (lista.Count == 0)
+                {
+                    throw new NoticiaNaoEncontradaException($"Nenhuma notícia encontrada para o termo: {texto}");
+                }
+
 
                 return lista;
             }

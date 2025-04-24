@@ -45,6 +45,31 @@ namespace NewsFinder.View
             }
         }
 
+        public async void FazerPesquisaDireta(string termo)
+        {
+            try
+            {
+                var api = new NewsAPI();
+                var noticias = await api.ObterNoticiasAsync(termo);
+                MostrarNoticias(noticias);
+                MessageBox.Show($"Foram encontradas {noticias.Count} notícias.");
+
+            }
+            catch (ErroDeLigacaoAPIException ex)
+            {
+                MessageBox.Show("Erro de ligação: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (NoticiaNaoEncontradaException ex)
+            {
+                MessageBox.Show("Aviso: " + ex.Message, "Nenhuma notícia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro inesperado: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
         private void InitializeComponent()
         {
             this.listBoxNoticias = new System.Windows.Forms.ListBox();
@@ -118,7 +143,8 @@ namespace NewsFinder.View
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
             string texto = txtPesquisa.Text;
-            PedidoPesquisa?.Invoke(texto);
+            //PedidoPesquisa?.Invoke(texto);
+            FazerPesquisaDireta(texto);
         }
 
         private void HomeForm_Load(object sender, EventArgs e)
