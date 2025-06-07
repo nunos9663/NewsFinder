@@ -1,0 +1,14 @@
+C:\Users\catao\source\repos\NewsFinder\NewsFinder\bin\Debug\NewsFinder.exe.config
+C:\Users\catao\source\repos\NewsFinder\NewsFinder\bin\Debug\NewsFinder.exe
+C:\Users\catao\source\repos\NewsFinder\NewsFinder\bin\Debug\NewsFinder.pdb
+C:\Users\catao\source\repos\NewsFinder\NewsFinder\bin\Debug\Newtonsoft.Json.dll
+C:\Users\catao\source\repos\NewsFinder\NewsFinder\bin\Debug\Newtonsoft.Json.xml
+C:\Users\catao\source\repos\NewsFinder\NewsFinder\obj\Debug\NewsFinder.csproj.AssemblyReference.cache
+C:\Users\catao\source\repos\NewsFinder\NewsFinder\obj\Debug\NewsFinder.View.HomeForm.resources
+C:\Users\catao\source\repos\NewsFinder\NewsFinder\obj\Debug\NewsFinder.csproj.GenerateResource.cache
+C:\Users\catao\source\repos\NewsFinder\NewsFinder\obj\Debug\NewsFinder.csproj.CoreCompileInputs.cache
+C:\Users\catao\source\repos\NewsFinder\NewsFinder\obj\Debug\NewsFinder.csproj.Up2Date
+C:\Users\catao\source\repos\NewsFinder\NewsFinder\obj\Debug\NewsFinder.exe
+C:\Users\catao\source\repos\NewsFinder\NewsFinder\obj\Debug\NewsFinder.pdb
+C:\Users\catao\source\repos\NewsFinder\NewsFinder\obj\Debug\NewsFinder.View.LoginForm.resources
+C:\Users\catao\source\repos\NewsFinder\NewsFinder\obj\Debug\NewsFinder.View.RegistoForm.resources
