@@ -7,10 +7,11 @@ using System.Net.Http;
 using Newtonsoft.Json;
 using System.Dynamic;
 using NewsFinder.Model;
+using NewsFinder.Interfaces;
 
 namespace NewsFinder.Model
 {
-    public class NewsAPI
+    public class NewsAPI : INewsAPI
     {
         private const string apiKey = "496c658a29294fd2be403ce5515b045a";
         private const string endpoint = "https://newsapi.org/v2/everything?q={0}&language=pt&apiKey={1}";
